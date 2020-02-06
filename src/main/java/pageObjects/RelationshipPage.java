@@ -20,6 +20,7 @@ public class RelationshipPage {
 	public WebElement getTitle() {
 		
 		return driver.findElement(title);
+		//test
 		
 	}
 
