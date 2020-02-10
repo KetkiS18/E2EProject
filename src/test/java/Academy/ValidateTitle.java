@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,6 +30,11 @@ public class ValidateTitle extends base {
 		
 		
 		
+	}
+@AfterTest
+	
+	public void teardown() {
+		driver.close();
 	}
 	
 	@DataProvider
