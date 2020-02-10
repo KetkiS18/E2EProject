@@ -17,7 +17,7 @@ public class ValidateTitle extends base {
 	
 	public void validateTitle(String login, String password) throws IOException {
 		driver = initializeDriver();
-		driver.get("https://oa.qaorch.com/please_login.php");
+		driver.get(prop.getProperty("url"));
 		
 		LandingPage l = new LandingPage(driver);
 		l.getLogin().sendKeys(login);
