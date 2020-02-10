@@ -2,6 +2,8 @@ package Academy;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -10,16 +12,28 @@ import resources.base;
 
 public class HomePage extends base {
 	
+	@BeforeTest
+	
+	public void initialize() throws IOException {
+		driver = initializeDriver();
+		driver.get("https://oa.qaorch.com/please_login.php");
+	}
+	
 	@Test(dataProvider = "getData")
 	
 	public void basePageNavigation(String login, String password) throws IOException {
-		driver = initializeDriver();
-		driver.get("https://oa.qaorch.com/please_login.php");
+		
 		
 		LandingPage l = new LandingPage(driver);
 		l.getLogin().sendKeys(login);
 		l.getPassword().sendKeys(password);
 		l.signin().click();
+	}
+	
+	@AfterTest
+	
+	public void teardown() {
+		driver.close();
 	}
 	
 	@DataProvider

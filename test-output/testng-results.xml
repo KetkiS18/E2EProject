@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16452" started-at="2020-02-05T10:56:45Z" finished-at="2020-02-05T10:57:02Z">
+  <suite name="Suite" duration-ms="43215" started-at="2020-02-10T10:33:45Z" finished-at="2020-02-10T10:34:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16452" started-at="2020-02-05T10:56:45Z" finished-at="2020-02-05T10:57:02Z">
+    <test name="Test" duration-ms="43215" started-at="2020-02-10T10:33:45Z" finished-at="2020-02-10T10:34:28Z">
       <class name="Academy.ValidateTitle">
-        <test-method status="PASS" signature="validateTitle(java.lang.String, java.lang.String)[pri:0, instance:Academy.ValidateTitle@76908cc0]" name="validateTitle" duration-ms="16439" started-at="2020-02-05T16:26:45Z" data-provider="getData" finished-at="2020-02-05T16:27:02Z">
+        <test-method status="PASS" signature="validateTitle(java.lang.String, java.lang.String)[pri:0, instance:Academy.ValidateTitle@5bd03f44]" name="validateTitle" duration-ms="8583" started-at="2020-02-10T16:04:15Z" data-provider="getData" finished-at="2020-02-10T16:04:23Z">
           <params>
             <param index="0">
               <value>
@@ -24,6 +24,56 @@
           </reporter-output>
         </test-method> <!-- validateTitle -->
       </class> <!-- Academy.ValidateTitle -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Academy.HomePage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Academy.HomePage@5ae50ce6]" name="initialize" is-config="true" duration-ms="14519" started-at="2020-02-10T16:03:45Z" finished-at="2020-02-10T16:03:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Academy.ValidateTitle@5bd03f44]" name="initialize" is-config="true" duration-ms="9123" started-at="2020-02-10T16:03:59Z" finished-at="2020-02-10T16:04:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:Academy.HomePage@5ae50ce6]" name="basePageNavigation" duration-ms="2988" started-at="2020-02-10T16:04:08Z" data-provider="getData" finished-at="2020-02-10T16:04:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hello]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abcdef]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:Academy.HomePage@5ae50ce6]" name="basePageNavigation" duration-ms="3347" started-at="2020-02-10T16:04:11Z" data-provider="getData" finished-at="2020-02-10T16:04:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Synergy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[@ffSh@reTeam#123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Academy.HomePage@5ae50ce6]" name="teardown" is-config="true" duration-ms="2311" started-at="2020-02-10T16:04:23Z" finished-at="2020-02-10T16:04:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Academy.ValidateTitle@5bd03f44]" name="teardown" is-config="true" duration-ms="2318" started-at="2020-02-10T16:04:26Z" finished-at="2020-02-10T16:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Academy.HomePage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

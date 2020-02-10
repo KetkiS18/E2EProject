@@ -8,7 +8,7 @@ public class LandingPage {
 
 	public WebDriver driver;
 	
-	By login = By.xpath("//*[@id=\"loginBox\"]/form/table/tbody/tr[1]/td/input");
+	By login = By.name("username");
 	By password = By.xpath("//*[@id=\"loginBox\"]/form/table/tbody/tr[2]/td/input");
 	By signin = By.id("sign_in");
 
