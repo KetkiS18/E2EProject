@@ -2,6 +2,7 @@ package Academy;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,12 @@ public class HomePage extends base {
 		l.getLogin().sendKeys(login);
 		l.getPassword().sendKeys(password);
 		l.signin().click();
+	}
+	
+	@AfterTest
+	
+	public void teardown() {
+		driver.close();
 	}
 	
 	@DataProvider

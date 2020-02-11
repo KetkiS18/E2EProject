@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,11 +15,17 @@ import resources.base;
 
 public class ValidateTitle extends base {
 	
+	@BeforeTest
+	
+	public void initialize() throws IOException {
+		driver = initializeDriver();
+		driver.get(prop.getProperty("url"));
+	}
+	
 	@Test(dataProvider = "getData")
 	
 	public void validateTitle(String login, String password) throws IOException {
-		driver = initializeDriver();
-		driver.get(prop.getProperty("url"));
+		
 		
 		LandingPage l = new LandingPage(driver);
 		l.getLogin().sendKeys(login);
@@ -30,6 +38,12 @@ public class ValidateTitle extends base {
 		
 		
 	}
+	@AfterTest
+	
+	public void teardown() {
+		driver.close();
+	}
+	
 	
 	@DataProvider
 	
